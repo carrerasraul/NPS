@@ -1,6 +1,6 @@
 'use strict';
 
-function formatQuery(params) {
+function formatQueryParams(params) {
     const queryItems = Object.keys(params).map(key => `${[encodeURIComponent(key)]}=${encodeURIComponent(params[key])}`);
     return queryItems.join('&');
 }
@@ -26,7 +26,7 @@ function getParks(baseUrl, stateArr, maxResults, apiKey) {
         limit: maxResults
     }
 
-    const queryString = formatQuery(params);
+    const queryString = formatQueryParams(params);
     const url = baseUrl + '?' + queryString + '&api_key=' + apiKey;
     console.log(url);
 
@@ -52,14 +52,9 @@ function watchForm() {
         const stateArr = $('.js-state-entered').val().split(",");
         const maxResults = $('.js-result-amt').val();
 
-        const apiKey = '4zMvZfVgWpTYOlAmQi2FByezqsmaVCqhpfABuNgR'
+        const apiKey = 'UTz8fgK79uQu8UpWymKj7i5CiBfBcJSPmtvb33Hd'
         getParks(baseUrl, stateArr, maxResults, apiKey);
     })
 }
-
-$(function() {
-    console.log('App loaded! Waiting for submit!');
-    watchForm();
-});
 
 $(watchForm);
