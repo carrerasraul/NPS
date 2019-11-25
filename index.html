@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta name="description" content="Search for information about national parks.">
+    <title>National Parks Search</title>
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="container">
-        <h1>Find a National Park Near You!</h1>
+        <h1>Find A Park Near You!</h1>
 
-        <form class="input-form">
-            <label for="search-term">Enter one or more state abbreviations, separated by commas:</label>
+        <form class="js-form">
+            <label for="search-term">Enter one or more state abbreviations, separated by commas: </label>
             <input type="text" name="search-term" class="js-state-entered" required>
             <br>
             <br>
-            <label for="max-results">Select max number of results:</label>
+            <label for="max-results">Maximum number of results to return: </label>
             <input type="number" name="max-results" class="js-result-amt" value="10">
 
             <input type="submit" value="Go!">
@@ -27,12 +28,13 @@
 
         <p class="js-error"></p>
 
-        <section class="results hidden">
-            <h2>Search Results:</h2>
-            <ul class="results-list"></ul>
+        <section class="results hidden" role="region">
+            <h2>Search results: </h2>
+            <ul class="results-list">
+            </ul>
         </section>
     </div>
-    <link href="/js/script.js">
+    <script src="/js/script.js"></script>
 </body>
 
 </html>
