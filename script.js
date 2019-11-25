@@ -52,7 +52,7 @@ function watchForm() {
         const stateArr = $('.js-state-entered').val().split(",");
         const maxResults = $('.js-result-amt').val();
 
-        const apiKey = 'UTz8fgK79uQu8UpWymKj7i5CiBfBcJSPmtvb33Hd'
+        const apiKey = '4zMvZfVgWpTYOlAmQi2FByezqsmaVCqhpfABuNgR'
         getParks(baseUrl, stateArr, maxResults, apiKey);
     })
 }
